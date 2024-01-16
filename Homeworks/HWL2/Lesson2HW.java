@@ -1,4 +1,4 @@
-package lesson2Homework1;
+package Homeworks.HWL2;
 
 public class Lesson2HW {
 
@@ -19,5 +19,6 @@ public class Lesson2HW {
 
         System.out.println("a = " +a);
         System.out.println("b = " +b);
+
     }
 }
