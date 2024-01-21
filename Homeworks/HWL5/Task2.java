@@ -6,28 +6,28 @@ public class Task2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Введите число: ");
         int number = scanner.nextInt();
+        String numStr = Integer.toString(number);
 
-        int originalNumber = number;
-        int reversedNumber = 0;
+        boolean isPalindrome = true;
 
-        while (number != 0) {
-            int remainder = number % 10;
-            reversedNumber = reversedNumber * 10 + remainder;
-            number /= 10;
+        for (int i = 0; i < numStr.length() / 2; i++) {
+            if (numStr.charAt(i) != numStr.charAt(numStr.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
         }
 
-        // Проверяем, является ли число палиндромом
-        if (originalNumber == reversedNumber) {
-            System.out.println(originalNumber + " является палиндромом.");
+        if (isPalindrome) {
+            System.out.println(number + " - это палиндром.");
         } else {
-            System.out.println(originalNumber + " не является палиндромом.");
+            System.out.println(number + " - это не палиндром.");
         }
 
-        // Закрываем Scanner
-        scanner.close();
     }
-
-
 }
+
+
+
