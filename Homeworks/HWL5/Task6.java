@@ -6,10 +6,9 @@ import java.util.Random;
 public class Task6 {
 
     public static void main(String[] args) {
-        // Создаем массив на 45 элементов
+
         int[] array = new int[45];
 
-        // Заполняем массив случайными числами от -50 до +50
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(101) - 50;
